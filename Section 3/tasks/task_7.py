@@ -31,3 +31,29 @@ ____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
 ''')
 print("Welcome to Treasure Island.")
 print("Your mission is to find the treasure.")
+
+decision_1 = input('You\'re at a crossroad, where do you want to go?\n'
+                   'Type "left" or "right".\n').lower()
+
+if decision_1 == "left":
+    decision_2 = input('You\'ve come to a lake. '
+                  'There is a island in the middle of the lake. \n'
+                  'Type "wait" to wait for a boat. '
+                  'Type "swin" to swin across.\n').lower()
+    if decision_2 == "wait":
+        decision_3 = input('You arrive at the island unharmed.\n'
+                           'There is house with 3 doors. One red, '
+                           'one yellow and one blue.\n'
+                           'Which colour do you choose?\n').lower()
+        if decision_3 == "red":
+            print('It\'s a room full of fire.\nGame over!')
+        elif decision_3 == "yellow":
+            print('You found the treasure.\nYou win!')
+        elif decision_3 == "blue":
+            print('You enter a room of beasts. Game over!')
+        else:
+            print('You chose a door that doesn\'t exist.\nGame over!')
+    else:
+        print('You got attacked by an angry trout.\nGame over!')
+else:
+     print('You fell into a hole. Game over!')
