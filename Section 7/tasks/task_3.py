@@ -3,8 +3,8 @@
 # Your goal is to build a Hangman game using everything you have learnt about Python programming.
 
 ## STEP 3
-
 import random
+
 word_list = ["aardvark", "baboon", "camel"]
 
 chosen_word = random.choice(word_list)
@@ -24,22 +24,27 @@ print(placeholder)
     # You can use the in keyword to check if a String or List contains a particular item.
     # e.g. Google: check if a letter is present in a string python
 
-guess = input("Guess a letter: ").lower()
+game_over = False
+correct_letters = []
 
-display = ""
+while not game_over:
+    guess = input("Guess a letter: ").lower()
 
-## TODO-2
-    # Update the for loop so that previous guesses are added to the display String.
-    # At the moment, when the user makes a new guess, the previous guess gets replaced by a "_".
-    # We need to fix that by updating the for loop.
-#  Hint 2 
-    # Think about how you can store the matched letters and use an elif to check if a letter has been matched before.
+    display = ""
 
-for letter in chosen_word:
-    if letter == guess:
-        display += letter
-    else:
-        display += "_"
+    ## TODO-2
+        # Update the for loop so that previous guesses are added to the display String.
+        # At the moment, when the user makes a new guess, the previous guess gets replaced by a "_".
+        # We need to fix that by updating the for loop.
+    #  Hint 2 
+        # Think about how you can store the matched letters and use an elif to check if a letter has been matched before.
 
-print(display)
-
+    for letter in chosen_word:
+        if letter == guess:
+            display += letter
+            correct_letters.append(guess)
+        elif letter in correct_letters:
+            display += letter
+        else:
+            display += "_"
+    print(display)
