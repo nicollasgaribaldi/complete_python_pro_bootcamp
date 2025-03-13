@@ -26,4 +26,15 @@
 
 # The value of the value of the input variable, e.g. Angela when you call the previous greet function: greet("Angela") is called the argument.
 
+def greet():
+    print("Hello")
+    print("How do you do?")
+    print("Isn't the weather nice?")
 
+greet()
+
+def greet_with_name(name):
+    print(f"Hello {name}!")
+    print(f"How do you do {name}?")
+
+greet_with_name("Nícollas")
