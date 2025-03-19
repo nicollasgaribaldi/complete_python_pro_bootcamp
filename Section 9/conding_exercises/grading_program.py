@@ -25,4 +25,10 @@ student_scores = {
     'Neville': 60
 }
 
-student_grades = 
+student_grades = {
+    'Harry': 'Exceeds Expectations',
+    'Ron': 'Acceptable',
+    'Hermione': 'Outstanding',
+    'Draco': 'Acceptable',
+    'Neville': 'Fail'
+}
