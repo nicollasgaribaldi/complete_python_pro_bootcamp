@@ -16,14 +16,13 @@
     # Process coins
     # Check if transaction was successfull
     # Make the coffee
-### COFFEE MACHINE PROJECT ###
 
 from menu import MENU
 from art import welcome
 from properties import resources, coins
 
 its_on = True
-money = 0 
+money = 0
 
 def report():
     """Imprime o relatório de recursos disponíveis na máquina."""
@@ -60,7 +59,7 @@ def process_payment(drink):
         return False
     else:
         change = round(total_inserted - price, 2)
-        money += price  # Adiciona ao caixa da máquina
+        money += price 
         if change > 0:
             print(f"• Here is your change: ${change:.2f}")
         return True
