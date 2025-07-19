@@ -1,12 +1,14 @@
+import turtle as t
 from turtle import Turtle, Screen
 
-tim = Turtle()
 
-for _ in range(15):
-    tim.forward(10)
-    tim.penup()
-    tim.forward(10)
-    tim.pendown()
+
+for _ in range(4):
+    t.pendown()
+    t.forward(100)
+    t.penup()
+    t.forward(100)
+    t.right(90)
 
 screen = Screen()
 screen.exitonclick()
