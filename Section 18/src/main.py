@@ -1,14 +1,17 @@
 import turtle as t
 from turtle import Turtle, Screen
+import random
 
+# Draw a triangle, square, pentagon, hexagon, heptagon, octagon, nonagon and decagon
+# Each shape should be drawn with one different color
 
+# unfinished code
 
-for _ in range(4):
-    t.pendown()
-    t.forward(100)
-    t.penup()
-    t.forward(100)
-    t.right(90)
+colors = {red, blue, orange, purple}
 
+t.color(random.choice(colors))
+
+t.fd(100)
+t.rt(angle)
 screen = Screen()
 screen.exitonclick()
